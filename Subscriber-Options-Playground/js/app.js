@@ -20,7 +20,7 @@ var subscriberOptions = {};
 Object.assign(subscriberOptions, defaultOptions);
 
 
-var settings = ['insertDefaultUI','networkTest','subscribeToAudio','subscribeToVideo','showControls'];
+var settings = ['insertDefaultUI','testNetwork','subscribeToAudio','subscribeToVideo','showControls'];
 var buttons = {};
 settings.forEach(element => {
   buttons[element] = document.getElementById(element);
