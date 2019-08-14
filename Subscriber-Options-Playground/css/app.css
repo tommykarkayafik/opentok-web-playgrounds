@@ -1,0 +1,141 @@
+body, html {
+    background-color: gray;
+    height: 100%;
+}
+
+#videos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#subscriber {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+#publisher {
+    position: absolute;
+    width: 405px;
+    height: 270px;
+    bottom: 20px;
+    left: 10px;
+    z-index: 100;
+    border: 3px solid white;
+    border-radius: 3px;
+}
+
+.toggle-button-on {
+    background-color: green;
+}
+
+.toggle-button-off {
+    background-color: red;
+}
+
+.button {
+    position: absolute;
+    z-index: 1000;
+    height: 50px;
+    width: 77px;
+    border-radius: 15%;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-size: small;
+}
+
+.select {
+    position: absolute;
+    z-index: 1000;
+    height: 30px;
+    width: 160px;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-size: small;
+}
+
+.input {
+    position: absolute;
+    z-index: 1000;
+    height: 30px;
+    font-size: small;
+    width: 170px;
+}
+
+#settings {
+    position: absolute;
+    bottom: 15px;
+    left: 450PX;
+}
+
+#button-box {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+#enums {
+    position: relative;
+    bottom: 27px;
+    left: 290px;
+}
+
+#textboxes {
+    position: relative;
+    bottom: 37px;
+    left: 100px;
+}
+
+#init {
+    position: absolute;
+    bottom: 122px;
+    left: 460px;
+    z-index: 1000;
+}
+
+#networkTest {
+    bottom: 0px;
+}
+
+#subscribeToAudio {
+    bottom: 55px;
+}
+
+#subscribeToVideo {
+    bottom: 110px;
+}
+
+#showControls {
+    bottom: 165px;
+}
+
+#insertDefaultUI {
+    bottom: 220px;
+}
+
+#fitMode {
+    bottom: 75px;
+}
+
+#insertMode {
+    bottom: 115px;
+}
+
+#preferredFrameRate {
+    bottom: 120px;
+}
+
+#preferredResWidth {
+    bottom: 80px;
+}
+
+#preferredResHeight {
+    bottom: 40px;
+}

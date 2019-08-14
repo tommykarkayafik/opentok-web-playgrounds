@@ -1,0 +1,88 @@
+body, html {
+    background-color: gray;
+    height: 100%;
+}
+
+#videos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#subscriber {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.select {
+    position: absolute;
+    z-index: 1000;
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-size: small;
+}
+
+.input {
+    position: absolute;
+    z-index: 1000;
+    height: 30px;
+    font-size: small;
+    width: 120px;
+}
+
+#settings {
+    position: absolute;
+    bottom: 20px;
+    left: 400px;
+}
+
+#enums {
+    position: relative;
+    bottom: 20px;
+    left: 0px;
+}
+
+#backgroundImageURI {
+    position: relative;
+    bottom: 133px;
+    left: 270px;
+}
+
+#init {
+    position: absolute;
+    bottom: 130px;
+    left: 420px;
+    z-index: 1000;
+}
+
+#audioLevelDisplayMode {
+    bottom: 0px;
+}
+
+#audioBlockedDisplayMode {
+    bottom: 40px;
+}
+
+#videoDisabledDisplayMode {
+    bottom: 80px;
+}
+
+#buttonDisplayMode {
+    bottom: 120px;
+}
+
+#nameDisplayMode {
+    bottom: 160px;
+}
+
+#volume {
+    bottom: 50%
+}
