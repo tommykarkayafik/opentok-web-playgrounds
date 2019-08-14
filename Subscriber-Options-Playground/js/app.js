@@ -9,7 +9,11 @@ var subscriber;
 const defaultOptions = {
   insertMode: 'append',
   width: '100%',
-  height: '100%'
+  height: '100%',
+  preferredResolution: {
+    width: 360,
+    height: 240
+  }
 };
 
 var subscriberOptions = {};
@@ -91,7 +95,7 @@ function newSub(session) {
     height: preferences['preferredResHeight']
   }
 
-  session.unsubscribe(subscriber);
+  if (subscriber != null && subscriber.session != null) session.unsubscribe(subscriber);
   subscriber = session.subscribe(publisher.stream, 'subscriber', subscriberOptions, handleError);
 };
 
@@ -105,11 +109,13 @@ function initializeSession() {
   session.on('streamCreated', (event) => {
     subscriber = session.subscribe(event.stream, 'subscriber', subscriberOptions, handleError);
   });
+
   /*
   publisher.on('streamCreated', (event) => {
     subscriber = session.subscribe(event.stream, 'subscriber', subscriberOptions, handleError);
   });  
   */
+
   Object.keys(buttons).forEach(button => {
     buttons[button].addEventListener('click', () => toggleStyle(buttons[button]));
   });
