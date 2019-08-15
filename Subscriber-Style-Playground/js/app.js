@@ -8,8 +8,7 @@ var subscriber;
 const defaultOptions = {
   insertMode: 'append',
   width: '100%',
-  height: '100%',
-  fitMode: 'contain'
+  height: '100%'
 };
 
 settings = ['audioBlockedDisplayMode','audioLevelDisplayMode','videoDisabledDisplayMode','buttonDisplayMode','nameDisplayMode'];
