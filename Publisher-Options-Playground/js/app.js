@@ -21,7 +21,7 @@ settings.forEach(element => {
   buttons[element] = document.getElementById(element);
 });
 
-settings = ['facingMode','fitMode','preferred','insertMode','resolution','audioSource','videoSource'];
+settings = ['facingMode','fitMode','frameRate','insertMode','resolution','audioSource','videoSource'];
 var enums = {};
 settings.forEach(element => {
   enums[element] = document.getElementById(element);
