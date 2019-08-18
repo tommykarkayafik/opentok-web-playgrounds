@@ -1,9 +1,9 @@
 /* global OT API_KEY TOKEN SESSION_ID SAMPLE_SERVER_BASE_URL */
 
-var apiKey;
-var sessionId;
-var token;
-var publisher;
+let apiKey;
+let sessionId;
+let token;
+let publisher;
 
 const defaultOptions = {
   insertMode: 'append',
@@ -11,24 +11,24 @@ const defaultOptions = {
   height: '100%'
 };
 
-var publisherOptions = {};
+let publisherOptions = {};
 Object.assign(publisherOptions, defaultOptions);
 
 
-var settings = ['audioFallbackEnabled','disableAudioProcessing','enableStereo','insertDefaultUI','mirror','publishAudio','publishVideo','showControls'];
-var buttons = {};
+let settings = ['audioFallbackEnabled', 'disableAudioProcessing', 'enableStereo', 'insertDefaultUI', 'mirror', 'publishAudio', 'publishVideo', 'showControls'];
+let buttons = {};
 settings.forEach(element => {
   buttons[element] = document.getElementById(element);
 });
 
-settings = ['facingMode','fitMode','frameRate','insertMode','resolution','audioSource','videoSource'];
-var enums = {};
+settings = ['facingMode', 'fitMode', 'frameRate', 'insertMode', 'resolution', 'audioSource', 'videoSource'];
+let enums = {};
 settings.forEach(element => {
   enums[element] = document.getElementById(element);
 });
 
 settings = ['bitrate']
-var inputs = {};
+let inputs = {};
 settings.forEach(element => {
   inputs[element] = document.getElementById(element);
 });
@@ -111,7 +111,7 @@ function initializeSession() {
     OT.getDevices((error, response) => {
       handleError(error);
       response.forEach((device,i) => {
-        var option = document.createElement('option');
+        let option = document.createElement('option');
         option.value = device.deviceId;
         option.text = i
         if (device['kind'] === 'audioInput') {

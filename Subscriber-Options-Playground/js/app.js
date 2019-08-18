@@ -1,10 +1,10 @@
 /* global OT API_KEY TOKEN SESSION_ID SAMPLE_SERVER_BASE_URL */
 
-var apiKey;
-var sessionId;
-var token;
-var publisher;
-var subscriber;
+let apiKey;
+let sessionId;
+let token;
+let publisher;
+let subscriber;
 
 const defaultOptions = {
   insertMode: 'append',
@@ -16,24 +16,24 @@ const defaultOptions = {
   }
 };
 
-var subscriberOptions = {};
+let subscriberOptions = {};
 Object.assign(subscriberOptions, defaultOptions);
 
 
-var settings = ['insertDefaultUI','testNetwork','subscribeToAudio','subscribeToVideo','showControls'];
-var buttons = {};
+let settings = ['insertDefaultUI', 'testNetwork', 'subscribeToAudio', 'subscribeToVideo', 'showControls'];
+let buttons = {};
 settings.forEach(element => {
   buttons[element] = document.getElementById(element);
 });
 
 settings = ['fitMode','insertMode'];
-var enums = {};
+let enums = {};
 settings.forEach(element => {
   enums[element] = document.getElementById(element);
 });
 
-settings = ['preferredResWidth','preferredResHeight','preferredFrameRate']
-var inputs = {};
+settings = ['preferredResWidth', 'preferredResHeight', 'preferredFrameRate']
+let inputs = {};
 settings.forEach(element => {
   inputs[element] = document.getElementById(element);
 });

@@ -1,9 +1,9 @@
 /* global OT API_KEY TOKEN SESSION_ID SAMPLE_SERVER_BASE_URL */
 
-var apiKey;
-var sessionId;
-var token;
-var subscriber;
+let apiKey;
+let sessionId;
+let token;
+let subscriber;
 
 const defaultOptions = {
   insertMode: 'append',
@@ -11,8 +11,8 @@ const defaultOptions = {
   height: '100%'
 };
 
-settings = ['audioBlockedDisplayMode','audioLevelDisplayMode','videoDisabledDisplayMode','buttonDisplayMode','nameDisplayMode'];
-var enums = {};
+settings = ['audioBlockedDisplayMode', 'audioLevelDisplayMode', 'videoDisabledDisplayMode', 'buttonDisplayMode', 'nameDisplayMode'];
+let enums = {};
 settings.forEach(element => {
   enums[element] = document.getElementById(element);
 });
@@ -46,7 +46,7 @@ function setVolume() {
 }
 
 function newStyle() {
-  var style = {};
+  let style = {};
 
   Object.keys(enums).forEach(select => {
     if (enums[select].selectedIndex != 0) {

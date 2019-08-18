@@ -1,9 +1,9 @@
 /* global OT API_KEY TOKEN SESSION_ID SAMPLE_SERVER_BASE_URL */
 
-var apiKey;
-var sessionId;
-var token;
-var publisher;
+let apiKey;
+let sessionId;
+let token;
+let publisher;
 
 const defaultOptions = {
   insertMode: 'append',
@@ -12,14 +12,14 @@ const defaultOptions = {
   fitMode: 'cover'
 };
 
-const settings = ["audioLevelDisplayMode","archiveStatusDisplayMode","buttonDisplayMode","nameDisplayMode"];
-var enums = {};
+const settings = ['audioLevelDisplayMode', 'archiveStatusDisplayMode', 'buttonDisplayMode', 'nameDisplayMode'];
+let enums = {};
 settings.forEach(element => {
   enums[element] = document.getElementById(element);
 });
 
-const uri = document.getElementById("backgroundImageURI");
-const init = document.getElementById("init");
+const uri = document.getElementById('backgroundImageURI');
+const init = document.getElementById('init');
 
 // Handling all of our errors here by alerting them
 function handleError(error) {
@@ -41,7 +41,7 @@ function connectToSession(session) {
 }
 
 function newStyle() {
-  var style = {};
+  let style = {};
 
   Object.keys(enums).forEach(select => {
     if (enums[select].selectedIndex != 0) {
@@ -50,7 +50,7 @@ function newStyle() {
     }
   });
 
-  style["backgroundImageURI"] = uri.value;
+  style['backgroundImageURI'] = uri.value;
   publisher.setStyle(style);
 };
 
