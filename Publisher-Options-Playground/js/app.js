@@ -27,7 +27,7 @@ settings.forEach(element => {
   enums[element] = document.getElementById(element);
 });
 
-settings = ['bitrate']//
+settings = ['bitrate']
 var inputs = {};
 settings.forEach(element => {
   inputs[element] = document.getElementById(element);
