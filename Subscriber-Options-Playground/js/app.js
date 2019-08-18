@@ -32,7 +32,7 @@ settings.forEach(element => {
   enums[element] = document.getElementById(element);
 });
 
-settings = ['preferredResWidth','preferredResHeight','preferredFrameRate']//
+settings = ['preferredResWidth','preferredResHeight','preferredFrameRate']
 var inputs = {};
 settings.forEach(element => {
   inputs[element] = document.getElementById(element);
