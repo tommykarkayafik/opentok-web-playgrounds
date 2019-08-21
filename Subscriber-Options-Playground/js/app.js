@@ -54,7 +54,7 @@ function toggleStyle(button) {
 
 function connectToSession(session) {
   // Connect to the session
-  session.connect(token, function (error) {
+  session.connect(token, function callback(error) {
     // If the connection is successful, publish to the session
     if (error) {
       handleError(error);

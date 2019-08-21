@@ -29,12 +29,12 @@ function handleError(error) {
 
 function connectToSession(session) {
   // Connect to the session
-  session.connect(token, function (error) {
+  session.connect(token, function callback(error) {
     // If the connection is successful, log to the console
     if (error) {
       handleError(error);
     } else {
-      console.log('connected to session')
+      console.log('connected to session');
     }
   });
 }
@@ -72,7 +72,7 @@ function initializeSession() {
   connectToSession(session);
 
   init.addEventListener('click', newStyle);
-  document.getElementById('volume').addEventListener('input', setVolume)
+  document.getElementById('volume').addEventListener('input', setVolume);
 }
 
 // See the config.js file.

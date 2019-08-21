@@ -49,7 +49,7 @@ function toggleStyle(button) {
 
 function connectToSession(session) {
   // Connect to the session
-  session.connect(token, function (error) {
+  session.connect(token, function callback(error) {
     // If the connection is successful, publish to the session
     if (error) {
       handleError(error);
@@ -79,7 +79,7 @@ function newPub(session) {
   });
 
   Object.keys(inputs).forEach(input => {
-    if (inputs[input].value != null && ''!= inputs[input].value) {
+    if (inputs[input].value != null && '' != inputs[input].value) {
       if (!isNaN(Number(inputs[input].value))) {
         publisherOptions[input] = Number(inputs[input].value);
       } else {
@@ -115,9 +115,9 @@ function initializeSession() {
         option.value = device.deviceId;
         option.text = i
         if (device['kind'] === 'audioInput') {
-          document.getElementById('audioSource').options.add(option)
+          document.getElementById('audioSource').options.add(option);
         } else if (device['kind'] === 'videoInput') {
-          document.getElementById('videoSource').options.add(option)
+          document.getElementById('videoSource').options.add(option);
         }
       })
   }),handleError);
